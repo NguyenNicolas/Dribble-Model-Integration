@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dexpress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- ORIGINAL MODEL : https://dribbble.com/shots/15138497-Skateboard-Landing-Page-Design/attachments/6875298?mode=media -->
+    <div class="container">
+        <header>
+            <!-- LOGO SECTION-->
+            <a class="name_container" href="index.html">
+                Dexpress
+            </a>
+            <!-- NAV RESPONSIVE -->
+            <nav id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay_content">
+                    <a href="#">ABOUT US</a>
+                    <a href="#">FURNITURE</a>
+                    <a href="#">OUR STORES</a>
+                    <a href="#">BLOG</a>
+                </div>
+            </nav>
+            <div class="nav_container">
+                <span onclick="openNav()"><img src="assets/burger_menu.png" alt="burger menu"></span>
+                <a href="#"><img src="assets/profil.png" alt="photo de profil"></a>
+            </div>
+            <!-- NAVIGATION -->
+            <nav>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Our Stores</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#"><img src="assets/profil.png" alt="photo de profil"></a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="small_container">
+            <div class="skateman">
+                <img src="assets/skateman.png" alt="skateman">
+            </div>
+            <div class="left">
+                <h1>
+                    skaterboarding <br> done right
+                </h1>
+                <h2>
+                    Wooden longboard in Best <br> quality for skateboard lovers
+                </h2>
+                <button class="circle_container">
+                    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="60" r="59.5" fill="#2E2B2E" stroke="#2E2B2E"/>
+                        </svg>
+                        <span>Order Now</span>
+                </button>
+            </div>
+            <div class="right">
+                <div class="icons"><img src="assets/tint.png" alt="tint">
+                    <ul>
+                        <li>Color</li>
+                        <li>Yellow</li>
+                    </ul>
+                </div>
+                <div class="icons"><img src="assets/weight.png" alt="balance">
+                    <ul>
+                        <li>Weight</li>
+                        <li>8KG</li>
+                    </ul>
+                </div>
+                <div class="icons"><img src="assets/dimension.png" alt="ruler">
+                    <ul>
+                        <li>Dimension</li>
+                        <li>8.25 x 31.875</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="skates_container">
+            <div class="brands">
+                <h1>
+                    Brands Available
+                </h1>
+                <h2>
+                    Famous Brands
+                </h2>
+                <p>
+                    We have available stock for all <br> Famous brands you can order from <br> Our webside
+                </p>
+            </div>
+            <div class="skates">
+                <img src="assets/skates.png" alt="skates available">
+            </div>
+        </section>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

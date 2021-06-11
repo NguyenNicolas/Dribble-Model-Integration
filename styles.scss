@@ -1,0 +1,316 @@
+@import './_variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "poppins";
+    box-sizing: border-box;
+    color: $txt-black;
+}
+
+.overlay {
+    display: none;
+}
+
+.nav_container {
+    display: none;
+}
+
+.container {
+    background-image: url("assets/skateman.png");
+    background-size: 44%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f5fe;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 120px;
+
+    .name_container {
+        font-size: 2em;
+    }
+}
+
+nav {
+
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin: 0 30px;
+        }
+    }
+}
+
+a {
+    font-weight: bold;
+}
+
+.skateman {
+    display: none;
+}
+
+section.small_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 215px 0 120px;
+}
+
+.left {
+
+    h1 {
+        font-size: 4em;
+        line-height: 1.3em;
+    }
+
+    h2 {
+        color: $txt-grey;
+        font-weight: 500;
+        margin: 40px 0 60px 10px;
+        font-size: 1.3em;
+    }
+
+    .circle_container {
+        outline: none;
+        background: none;
+        border: none;
+        position: relative;
+        margin-left: 10px;
+    }
+
+    span {
+        color: $txt-orange;
+        position: absolute;
+        top: 32%;
+        left: 4%;
+        cursor: pointer;
+        font-size: 2em;
+        width: 200%;
+        font-weight: 600;
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+
+    .icons {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    li:nth-child(odd) {
+        font-weight: bold;
+        font-size: 1.3em;
+    }
+
+    li:nth-child(even) {
+        color: $txt-darkgrey;
+    }
+}
+
+.skates_container {
+    display: flex;
+    justify-content: space-between;
+
+    .brands {
+        margin-left: 140px;
+        margin-top: 100px;
+
+        h1 {
+            font-size: 2.3em;
+            color: $txt-lightblack;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: $txt-darkgrey;
+            font-weight: 600;
+            margin: 5px 0 15px 0;
+        }
+
+        p {
+            color: $txt-grey;
+        }
+    } 
+
+    .skates {
+        margin-right: 180px;
+    }  
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1500px) {
+
+    .container {
+        background-image: none;
+        max-width: none;
+    }
+
+    section.small_container {
+        margin: 0;
+        flex-direction: column;
+        justify-content: center;
+
+        .skateman {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .left {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        h2 {
+            margin: 20px 0;
+        }
+
+        .circle_container {
+            margin-left: 0;
+        }
+    }
+
+    .right {
+        display: none;
+    }
+    .skates {
+        display: none;
+    }
+
+    .brands {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    header {
+        margin-left: 0;
+
+        a {
+            font-weight: 500;
+        }
+
+        .name_container {
+            display: none;
+        }
+    }
+    .nav_container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px;
+
+        span {
+            cursor: pointer;
+        }
+    }
+
+    ul, li {
+        display: none;
+    }
+
+    .overlay {
+        display: block;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        background-color: black;
+        overflow-y: hidden;
+        transition: 0.5s;
+
+        a {
+            display: flex;
+            position: relative;
+            margin: 10px;
+            font-size: 36px;
+            color: white;
+            display: block;
+            transition: 0.5s;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 65%;
+                transform: scaleX(0);
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                transform-origin: left;
+                transition: transform 0.5s;
+            }
+
+            &:hover::before {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        .closebtn {
+            position: absolute;
+            right: 10px;
+            font-size: 60px;
+        }
+
+        .overlay_content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: 30%;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .left {
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1em;
+        }
+
+        svg {
+            width: 60px;
+            height: 60px;
+        }
+
+        span {
+            font-size: 1.3em;
+            color: $txt-black;
+            top: 23%;
+            left: 6%;
+        }
+        
+        circle {
+            fill: $circle;
+            stroke: $circle;
+        }
+    }
+}
